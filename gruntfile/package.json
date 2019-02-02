@@ -1,8 +1,24 @@
 {
-  "name": "my-project-name",
+  "name": "staticspages",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "^1.0.3",
     "grunt-contrib-watch": "^1.1.0"
-  }
+  },
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VectorCh/StaticPages.git"
+  },
+  "author": "LokoChen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VectorCh/StaticPages/issues"
+  },
+  "homepage": "https://github.com/VectorCh/StaticPages#readme",
+  "description": "all statics pages with desing and functionality"
 }

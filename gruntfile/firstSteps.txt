@@ -1,0 +1,17 @@
+Install grunt:
+	npm install -g grunt-cli
+
+Create files:
+	Gruntfile.js
+	package.json
+
+Run:
+	npm init
+
+Install all dependences (package.json) in the specific project:
+	npm install grunt --save-dev
+
+Execute:
+	grunt (by deafult)
+	or
+	grunt <specific action/function/method>
