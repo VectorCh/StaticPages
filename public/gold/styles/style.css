@@ -1,0 +1,29 @@
+body {
+  font: 100% Roboto, Helvetica, sans-serif;
+  color: #333;
+  margin: 0.4em;
+}
+
+header {
+  background-color: grey;
+}
+
+.box {
+  background-color: orange;
+  padding: 0;
+  margin: 0;
+  display: inline-table !important;
+  padding: 1em;
+  float: left;
+}
+
+img {
+  width: 100%;
+}
+
+footer {
+  background-color: red;
+  clear: both;
+}
+
+/*# sourceMappingURL=style.css.map */

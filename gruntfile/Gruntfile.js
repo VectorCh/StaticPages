@@ -16,10 +16,12 @@ module.exports = function(grunt) {
 		watch: {
 		  scripts: {
 				options: { livereload: true },
+				// Example: files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js']
 				files: [
 					'../public/index.html',
-					'../public/gold/styles/style.css',
+					'../public/gold/styles/process/main.scss',
 				],
+				tasks: ['sass'], /* Call another action */
 		  }
 		},
 
