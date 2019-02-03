@@ -1,0 +1,36 @@
+/* Reset input bootstrap */
+
+#dashboard {
+    // background-color: white;
+    // padding: 0.6em;
+    width: 100%; // border-radius: 5px;
+}
+.form-group {
+    margin-bottom: 0rem;
+    input {
+        text-align: center;
+        /* Reset */
+        &:focus {
+            outline-offset: 0px;
+            outline: -webkit-focus-ring-color auto 0px;
+        }
+    }
+}
+.form-control {
+    color: grey;
+    font-size: 1.3rem;
+    border: 0;
+    // outline: none;
+    &:focus {
+        // color: #495057;
+        // background-color: #fff;
+        // border-color: #9d00ff;
+        // outline: 0;
+        // box-shadow: 0px 0px 8px 0rem rgb(255, 42, 140);
+        color: grey;
+        background-color: white;
+        border-color: inherit;
+        outline: 0;
+        box-shadow: none;
+    }
+}
