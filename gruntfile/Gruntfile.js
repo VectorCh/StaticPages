@@ -20,6 +20,8 @@ module.exports = function(grunt) {
 				files: [
 					'../public/index.html',
 					'../public/gold/styles/process/main.scss',
+					'../public/gold/styles/process/dashboard.scss',
+
 				],
 				tasks: ['sass'], /* Call another action */
 		  }
