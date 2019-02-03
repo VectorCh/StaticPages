@@ -1,4 +1,9 @@
 @charset "UTF-8";
+#sortable1, #sortable2,
+#sortable3, #sortable4 {
+  border: 1px solid white;
+}
+
 html {
   height: 100%;
 }

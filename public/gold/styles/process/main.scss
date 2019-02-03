@@ -8,6 +8,10 @@ $margin-elements: 0.4em;
 $margin-elements-2: 0.6em;
 $borders: 0.3em;
 $margin-content-elements: 0.1em;
+#sortable1, #sortable2, 
+#sortable3, #sortable4{
+    border: 1px solid $second-color;
+}
 html {
     height: 100%;
 }
