@@ -4,24 +4,36 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!-- 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script
-  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-  crossorigin="anonymous"></script> -->
  
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="gold/styles/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<title>Main</title>
 	<script>
 	$(function() {
 	  $( "#sortable1, #sortable2, #sortable3, #sortable4").sortable({
 	    connectWith: ".connectedSortable"
 	  }).disableSelection();
-	} )();
+
+	  /* Catch elements when change position */
+	  $('#sortable1').sortable({
+			update: function (event, ui) {
+			  var data = $(this).sortable('toArray');
+			  console.log(data);
+			  console.log(data[0]);
+			}
+		});
+		$('#sortable2').sortable({
+			// axis: 'y', // sólo posibilita movimiento entre ese eje
+			update: function (event, ui) {
+			  var data = $(this).sortable('toArray');
+			  console.log(data);
+			  console.log(data[0]);
+			}
+		});
+	} );
 </script>
 </head>
 <body>
@@ -29,161 +41,205 @@
 		<h1>LifeLinks</h1>
 	</header>
 	<div id="main">
-		<div class="head-category col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6">
+		<div class="head-category ">
 			<div class="title-category">
 				<span>Category 1</span>
 			</div>
 			<div id="sortable1" class="content-category connectedSortable">
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_0_1" class="box-link grab">
+					<span>Enlace 0 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 2</span>
+				<div id="element_0_2" class="box-link grab">
+					<span>Enlace 0 2</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 3</span>
+				<div id="element_0_3" class="box-link grab">
+					<span>Enlace 0 3</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 4</span>
+				<div id="element_0_4" class="box-link grab">
+					<span>Enlace 0 4</span>
 				</div>
-								<div class="box-link">
-					<span>Enlace 5</span>
+				<div id="element_0_5" class="box-link grab">
+					<span>Enlace 0 5</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 6</span>
+				<div id="element_0_6" class="box-link grab">
+					<span>Enlace 0 6</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 7</span>
+				<div id="element_0_7" class="box-link grab">
+					<span>Enlace 0 7</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 8</span>
+				<div id="element_0_8" class="box-link grab">
+					<span>Enlace 0 8</span>
 				</div>
-								<div class="box-link">
-					<span>Enlace 9</span>
+				<div id="element_0_9" class="box-link grab">
+					<span>Enlace 0 9</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 10</span>
+				<div id="element_0_10" class="box-link grab">
+					<span>Enlace 0 10</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_0_11" class="box-link grab">
+					<span>Enlace 0 11</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-								<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_0_12" class="box-link grab">
+					<span>Enlace 0 12</span>
 				</div>
 			</div>
 		</div>
 
-		<div class="head-category col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6">
-			<div class="title-category">
-				<span>Category 2</span>
-			</div>
-			<div id="sortable2" class="content-category connectedSortable">
-				<div class="box-link">
-					<span>Enlace-1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace-1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace-1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace-1</span>
-				</div>
-								<div class="box-link">
-					<span>Enlace-1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-			</div>
-		</div>
-
-		<div class="head-category col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6">
+		<div class="head-category ">
 			<div class="title-category">
 				<span>Category 3</span>
 			</div>
 			<div id="sortable3" class="content-category connectedSortable">
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_2_1" class="box-link grab">
+					<span>Enlace 2 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_2_2" class="box-link grab">
+					<span>Enlace 2 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_2_3" class="box-link grab">
+					<span>Enlace 2 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_2_4" class="box-link grab">
+					<span>Enlace 2 1</span>
 				</div>
-								<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_2_5" class="box-link grab">
+					<span>Enlace 2 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-								<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
-				</div>
-				
 			</div>
 		</div>
 
-		<div class="head-category col-xl-2 col-lg-3 col-md-3 col-sm-4 col-6">
+		<div class="head-category ">
+			<div class="title-category">
+				<span>Category 2</span>
+			</div>
+			<div id="sortable2" class="content-category connectedSortable">
+				<div id="element_1_1" class="box-link grab">
+					<span>Enlace 1 1</span>
+				</div>
+				<div id="element_1_2" class="box-link grab">
+					<span>Enlace 1 1</span>
+				</div>
+				<div id="element_1_3" class="box-link grab">
+					<span>Enlace 1 1</span>
+				</div>
+				<div id="element_1_4" class="box-link grab">
+					<span>Enlace 1 1</span>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="head-category ">
 			<div class="title-category">
 				<span>Category 4</span>
 			</div>
 			<div id="sortable4" class="content-category connectedSortable">
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_3_1" class="box-link grab">
+					<span>Enlace 3 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_3_1" class="box-link grab">
+					<span>Enlace 3 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+			</div>
+		</div>
+
+		<div class="head-category ">
+			<div class="title-category">
+				<span>Category 2</span>
+			</div>
+			<div id="sortable2" class="content-category connectedSortable">
+				<div id="element_1_1" class="box-link grab">
+					<span>Enlace 1 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_1_2" class="box-link grab">
+					<span>Enlace 1 1</span>
 				</div>
-								<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_1_3" class="box-link grab">
+					<span>Enlace 1 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_1_4" class="box-link grab">
+					<span>Enlace 1 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+			</div>
+		</div>
+
+		<div class="head-category ">
+			<div class="title-category">
+				<span>Category 3</span>
+			</div>
+			<div id="sortable3" class="content-category connectedSortable">
+				<div id="element_2_1" class="box-link grab">
+					<span>Enlace 2 1</span>
 				</div>
-				<div class="box-link">
-					<span>Enlace 1</span>
+				<div id="element_2_2" class="box-link grab">
+					<span>Enlace 2 1</span>
+				</div>
+				<div id="element_2_3" class="box-link grab">
+					<span>Enlace 2 1</span>
+				</div>
+				<div id="element_2_4" class="box-link grab">
+					<span>Enlace 2 1</span>
+				</div>
+				<div id="element_2_5" class="box-link grab">
+					<span>Enlace 2 1</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="head-category ">
+			<div class="title-category">
+				<span>Category 4</span>
+			</div>
+			<div id="sortable4" class="content-category connectedSortable">
+				<div id="element_3_1" class="box-link grab">
+					<span>Enlace 3 1</span>
+				</div>
+				<div id="element_3_1" class="box-link grab">
+					<span>Enlace 3 1</span>
+				</div>
+			</div>
+		</div>
+				<div class="head-category ">
+			<div class="title-category">
+				<span>Category 1</span>
+			</div>
+			<div id="sortable1" class="content-category connectedSortable">
+				<div id="element_0_1" class="box-link grab">
+					<span>Enlace 0 1</span>
+				</div>
+				<div id="element_0_2" class="box-link grab">
+					<span>Enlace 0 2</span>
+				</div>
+				<div id="element_0_3" class="box-link grab">
+					<span>Enlace 0 3</span>
+				</div>
+				<div id="element_0_4" class="box-link grab">
+					<span>Enlace 0 4</span>
+				</div>
+				<div id="element_0_5" class="box-link grab">
+					<span>Enlace 0 5</span>
+				</div>
+				<div id="element_0_6" class="box-link grab">
+					<span>Enlace 0 6</span>
+				</div>
+				<div id="element_0_7" class="box-link grab">
+					<span>Enlace 0 7</span>
+				</div>
+				<div id="element_0_8" class="box-link grab">
+					<span>Enlace 0 8</span>
+				</div>
+				<div id="element_0_9" class="box-link grab">
+					<span>Enlace 0 9</span>
+				</div>
+				<div id="element_0_10" class="box-link grab">
+					<span>Enlace 0 10</span>
+				</div>
+				<div id="element_0_11" class="box-link grab">
+					<span>Enlace 0 11</span>
+				</div>
+				<div id="element_0_12" class="box-link grab">
+					<span>Enlace 0 12</span>
 				</div>
 			</div>
 		</div>

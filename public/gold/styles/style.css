@@ -1,6 +1,5 @@
 @charset "UTF-8";
-#sortable1, #sortable2,
-#sortable3, #sortable4 {
+#sortable1, #sortable2, #sortable3, #sortable4 {
   border: 1px solid white;
 }
 
@@ -38,24 +37,35 @@ header h1 {
 #main {
   display: flow-root;
   margin-bottom: 4%;
+  column-count: 4;
 }
 
+@media only screen and (max-width: 1000px) {
+  #main {
+    column-count: 3;
+  }
+}
+@media only screen and (max-width: 625px) {
+  #main {
+    column-count: 2;
+  }
+}
 .head-category {
   padding: 0;
   margin: 0;
   display: inline-table !important;
   padding: 0.1em;
-  float: left;
+  width: 100%;
   text-align: center;
   border-radius: 0.3em;
-  padding: 0.6em;
+  padding: 0.9em 0.3em;
 }
 
 .title-category {
   background-color: white;
   border-radius: 0.3em;
   margin-bottom: 0.4em;
-  padding: 0.6em;
+  padding: 1em;
 }
 .title-category span {
   color: black;
@@ -66,7 +76,7 @@ header h1 {
 
 .content-category {
   background-color: white;
-  max-height: 700px;
+  max-height: 35em;
   overflow: auto;
   /* aparición del scroll */
   border-radius: 0.3em;
@@ -77,6 +87,23 @@ header h1 {
   margin: 0.18em;
   border-radius: 0.3em;
   padding: 1.4em 0.6em;
+}
+
+.grab {
+  cursor: url("https://www.google.com/intl/en_ALL/mapfiles/openhand.cur"), all-scroll;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: -o-grab;
+  cursor: -ms-grab;
+  cursor: grab;
+}
+.grab:active {
+  cursor: url("https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur"), all-scroll;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: -o-grabbing;
+  cursor: -ms-grabbing;
+  cursor: grabbing;
 }
 
 img {

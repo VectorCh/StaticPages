@@ -8,8 +8,26 @@ $margin-elements: 0.4em;
 $margin-elements-2: 0.6em;
 $borders: 0.3em;
 $margin-content-elements: 0.1em;
-#sortable1, #sortable2, 
-#sortable3, #sortable4{
+$number-colum-sm: 2;
+$number-colum-md: 3;
+$number-colum-l: 4;
+@mixin grab-cursor {
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+@mixin grabbing-cursor {
+    cursor: url('https://www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: -o-grabbing;
+    cursor: -ms-grabbing;
+    cursor: grabbing;
+}
+#sortable1, #sortable2, #sortable3, #sortable4 {
     border: 1px solid $second-color;
 }
 html {
@@ -43,23 +61,36 @@ header {
 #main {
     display: flow-root;
     margin-bottom: 4%; // Correción bgcolor: linear-gradient
+    column-count: $number-colum-l;
+}
+// > 625px 3 column
+@media only screen and (max-width: 1000px) {
+    #main {
+        column-count: $number-colum-md;
+    }
+}
+// < 625px 2 column
+@media only screen and (max-width: 625px) {
+    #main {
+        column-count: $number-colum-sm;
+    }
 }
 .head-category {
     //background-color: $acent;
     padding: 0;
     margin: 0;
     display: inline-table !important;
-    padding: $margin-content-elements;
-    float: left;
+    padding: $margin-content-elements; // float: left;
+    width: 100%;
     text-align: center;
     border-radius: $borders;
-    padding: $margin-elements-2;
+    padding: $margin-elements-2 + 0.3em $margin-elements-2 - 0.3em;
 }
 .title-category {
     background-color: $second-color;
     border-radius: $borders;
     margin-bottom: $margin-elements;
-    padding: $margin-elements-2;
+    padding: $margin-elements-2 + $margin-elements;
     span {
         color: $primary-color;
         font-weight: bold;
@@ -69,7 +100,7 @@ header {
 }
 .content-category {
     background-color: $second-color;
-    max-height: 700px;
+    max-height: 35em;
     overflow: auto;
     /* aparición del scroll */
     border-radius: $borders;
@@ -79,6 +110,12 @@ header {
     margin: 0.18em;
     border-radius: $borders;
     padding: 1.4em $margin-elements-2;
+}
+.grab {
+    @include grab-cursor; // @include transition(transform .2s, box-shadow .2s);
+    &:active {
+        @include grabbing-cursor;
+    }
 }
 img {
     width: 100%;
